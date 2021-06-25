@@ -6,12 +6,14 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 		int a = sc.nextInt();
 		int b = sc.nextInt();
-		int c = sc.nextInt();
-		System.out.println( (a+b)%c) ;
-		System.out.println( ((a%c)+(b%c))%c );
-		System.out.println( (a*b)%c );
-		System.out.println( ((a%c)*(b%c))%c );
+		int b100 = (b/100)%10;
+		int b10 = (b/10)%10;
+		int b1 = b%10;
 		
+		System.out.println(a*b1);
+		System.out.println(a*b10);
+		System.out.println(a*b100);
+		System.out.println((a*b1)+(a*b10)*10+(a*b100)*100);
 		
 	} // main
 } // Class
