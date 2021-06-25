@@ -1,8 +1,15 @@
+import java.util.Scanner;
+
 public class Main {
 	public static void main(String[] args) {
 		
-		System.out.println("|\\_/|\n|q p|   /}\n( 0 )\"\"\"\\\n|\"^\"`    |\n||_/=\\\\__|");
-
+		Scanner sc = new Scanner(System.in);
+		
+		double A = sc.nextDouble();
+		double B = sc.nextDouble();
+		sc.close();
+		
+		System.out.println(A/B);
 		
 	} // main
 } // Class
