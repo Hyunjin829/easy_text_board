@@ -4,23 +4,32 @@ public class Main {
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
-		int x = sc.nextInt();
-		int y = sc.nextInt();
+		int H = sc.nextInt();
+		int M = sc.nextInt();
 		sc.close();
 		
-		if (x > 0) {
-			if (y > 0) {
-				System.out.println("1");
-			} else {
-				System.out.println("4");
-			}
-		} else {
-			if (y > 0) {
-				System.out.println("2");
-			} else {
-				System.out.println("3");
+		M = M - 45;
+		
+		if(M<0) {
+			H = H -1;
+			M = M + 60;
+			if(H<0) {
+				H = H + 24;
 			}
 		}
+		
+//		if (H<0 || M<0) {
+//			if (H<0 && M>0) {
+//				H = H + 24;
+//			} else if (H>0 && M<0) {
+//				M = M + 60;
+//			} else {
+//				H = H + 24;
+//				M = M + 60;
+//			}
+//		}
+//		
+		System.out.printf("%d %d", H, M);
 		
 	} // main
 } // Class
