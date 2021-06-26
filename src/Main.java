@@ -9,7 +9,13 @@ public class Main {
 		double B = sc.nextDouble();
 		sc.close();
 		
-		System.out.println(A/B);
+		if (A > B) {
+			System.out.println(">");
+		} else if (A < B) {
+			System.out.println("<");
+		} else {
+			System.out.println("==");
+		}
 		
 	} // main
 } // Class
