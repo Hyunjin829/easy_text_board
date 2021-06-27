@@ -5,11 +5,17 @@ public class Main {
 		
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
-		sc.close();
+		int arr[] = new int[n];
 		
-		for (int i = 1; i < 10; i++) {
-			System.out.println( n + " * " + i + " = " + n*i);
+		for (int i = 1; i < n+1; i++) {
+			int a = sc.nextInt();
+			int b = sc.nextInt();
+			arr[i-1] = a + b;
 		}
+		for(int number : arr) {
+			System.out.println(number);
+		}
+		sc.close();
 		
 	} // main
 } // Class
