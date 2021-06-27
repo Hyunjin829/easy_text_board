@@ -5,17 +5,13 @@ public class Main {
 		
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
-		int arr[] = new int[n];
+		int sum = 0;
+		sc.close();
 		
 		for (int i = 1; i < n+1; i++) {
-			int a = sc.nextInt();
-			int b = sc.nextInt();
-			arr[i-1] = a + b;
+			sum += i;
 		}
-		for(int number : arr) {
-			System.out.println(number);
-		}
-		sc.close();
+		System.out.println(sum);
 		
 	} // main
 } // Class
