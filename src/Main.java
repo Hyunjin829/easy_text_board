@@ -1,30 +1,17 @@
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.util.StringTokenizer;
+import java.util.Scanner;
 
 public class Main {
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		int N = sc.nextInt();
 		
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		int T = Integer.parseInt(br.readLine());
-		int a, b;
-		StringTokenizer st;
-		
-		for (int x = 1; x < T+1; x++) {
-			st = new StringTokenizer(br.readLine());
-			bw.write("Case #" + x + ": ");
-			a = Integer.parseInt(st.nextToken());
-			b = Integer.parseInt(st.nextToken());
-			bw.append(a + " + " + b + " = " + (a+b));
-			bw.newLine();
+		for (int i = 1; i < N+1; i++) {
+			for (int j = 0; j != i; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
 		}
-		
-		br.close();
-		bw.close();
 		
 	} // main
 } // Class
