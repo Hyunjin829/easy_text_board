@@ -11,13 +11,15 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		int T = Integer.parseInt(br.readLine());
+		int a, b;
 		StringTokenizer st;
 		
 		for (int x = 1; x < T+1; x++) {
-			bw.write("Case #" + x + ": ");
-			
 			st = new StringTokenizer(br.readLine());
-			bw.write( String.valueOf(Integer.parseInt(st.nextToken()) + Integer.parseInt(st.nextToken()) ));
+			bw.write("Case #" + x + ": ");
+			a = Integer.parseInt(st.nextToken());
+			b = Integer.parseInt(st.nextToken());
+			bw.append(a + " + " + b + " = " + (a+b));
 			bw.newLine();
 		}
 		
