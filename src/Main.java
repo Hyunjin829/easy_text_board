@@ -7,7 +7,10 @@ public class Main {
 		int N = sc.nextInt();
 		
 		for (int i = 1; i < N+1; i++) {
-			for (int j = 0; j != i; j++) {
+			for (int j = N; j != i; j--) {
+				System.out.print(" ");
+			}
+			for (int x = 0; x < i; x++) {
 				System.out.print("*");
 			}
 			System.out.println();
