@@ -14,7 +14,7 @@ public class Main {
 		
 		br.close();
 		
-		for (int i = 1; i < n+1; i++) {
+		for (int i = n; i > 0; i--) {
 			bw.write(String.valueOf(i)+"\n");
 		}
 		bw.flush();
