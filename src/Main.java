@@ -10,14 +10,18 @@ public class Main {
 		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		int n = Integer.parseInt(br.readLine());
+		int T = Integer.parseInt(br.readLine());
+		StringTokenizer st;
+		
+		for (int x = 1; x < T+1; x++) {
+			bw.write("Case #" + x + ": ");
+			
+			st = new StringTokenizer(br.readLine());
+			bw.write( String.valueOf(Integer.parseInt(st.nextToken()) + Integer.parseInt(st.nextToken()) ));
+			bw.newLine();
+		}
 		
 		br.close();
-		
-		for (int i = n; i > 0; i--) {
-			bw.write(String.valueOf(i)+"\n");
-		}
-		bw.flush();
 		bw.close();
 		
 	} // main
