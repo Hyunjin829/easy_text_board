@@ -17,6 +17,7 @@ public class Main {
 			int B = Integer.parseInt(arr[1]);
 			if( A==0 && B==0)
 				break;
+			
 			bw.write((A+B) + "\n");
 		}
 		br.close();
