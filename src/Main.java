@@ -6,24 +6,20 @@ import java.io.OutputStreamWriter;
 
 public class Main {
 	public static void main(String[] args) throws IOException {
-
+		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		String arr[];
 		
-		String arr[] = br.readLine().split(" ");
-		int N = Integer.parseInt(arr[0]);
-		int X = Integer.parseInt(arr[1]);
-		arr = br.readLine().split(" ");
-		for (int i = 0; i < N; i++) {
-			int Y = Integer.parseInt(arr[i]);
-			if(Y < X)
-				bw.write(Y + " ");
-			
+		while (true) {
+			arr = br.readLine().split(" ");
+			int A = Integer.parseInt(arr[0]);
+			int B = Integer.parseInt(arr[1]);
+			if( A==0 && B==0)
+				break;
+			bw.write((A+B) + "\n");
 		}
-		
 		br.close();
 		bw.close();
-		
-		
 	} // main
 } // Class
