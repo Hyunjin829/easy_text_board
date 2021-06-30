@@ -1,28 +1,30 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Main {
 	public static void main(String[] args) throws IOException {
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = new StringTokenizer(br.readLine());
 
-		int N = Integer.parseInt(br.readLine());
-		int M = N;
-		int count = 0;
+		int N = Integer.parseInt(st.nextToken());
+		String A = br.readLine();
+		String arr[] = A.split(" ");
+		br.close();
 
-		if (N < 10) {
-			N *= 10;
-			M = N;
-		}
-		while (true) {
-			N = ((N % 10) * 10) + (((N / 10) + (N % 10)) % 10);
-			count++;
-			if (M == N) {
-				break;
+		int max = Integer.parseInt(arr[0]);
+		int min = Integer.parseInt(arr[0]);
+		for (int i = 0; i < arr.length; i++) {
+			if (max - Integer.parseInt(arr[i]) < 0) {
+				max = Integer.parseInt(arr[i]);
+			}
+			if (min - Integer.parseInt(arr[i]) > 0) {
+				min = Integer.parseInt(arr[i]);
 			}
 		}
-		System.out.println(count);
+		System.out.println(min + " " + max);
 
 	} // main
 } // Class
