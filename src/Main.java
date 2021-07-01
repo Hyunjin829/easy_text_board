@@ -1,28 +1,29 @@
-import java.util.Arrays;
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Main {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 
-		Scanner sc = new Scanner(System.in);
-
-		int N = sc.nextInt();
-		int[] arr = new int[N];
-		int max;
-		double sum;
-
-		for (int i = 0; i < arr.length; i++) {
-			arr[i] = sc.nextInt();
-		}
-		Arrays.sort(arr);
-		max = arr[N - 1];
-		sum = 0;
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int T = Integer.parseInt(br.readLine());
+		String[] arr;
 		
-		for (int i = 0; i < N; i++) {
-			sum += ((double)arr[i] / (double)max) * 100;
+		for (int i = 0; i < T; i++) {
+			arr = br.readLine().split("");
+			int sum = 0, hap = 1;
+			for (int j = 0; j < arr.length; j++) {
+				if (arr[j].equals("O")) {
+					sum += hap;
+					hap++;
+				} else {
+					hap = 1;
+				}
+			}
+			System.out.println(sum);
 		}
-		System.out.println(sum/(double)N);
-
+		
+		
 
 	} // main
 } // Class
