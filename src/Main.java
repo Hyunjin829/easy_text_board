@@ -19,10 +19,7 @@ public class Main {
 		sum = 0;
 		
 		for (int i = 0; i < N; i++) {
-//			System.out.println(arr[i]);
-//			System.out.println(((double)arr[i] / (double)max) * 100);
 			sum += ((double)arr[i] / (double)max) * 100;
-//			System.out.println("sum: "+sum);
 		}
 		System.out.println(sum/(double)N);
 
