@@ -21,8 +21,9 @@ public class Main {
 				r++;
 				if (r == N) {
 					int sum = 0;
-					for (int j = 0; j < arr.length; j++) 
+					for (int j = 0; j < arr.length; j++) {
 						sum += arr[j];
+					}
 					System.out.println(sum);
 					
 					break;
