@@ -1,25 +1,37 @@
-import java.io.IOException;
-
 public class Main {
-
+	
 	public static int d(int n) {
-		int ans = n;
+		int sum = n;
 		
-		for (int i = 1; i < 10000; i *= 10) {
-			ans += (n/i)%10;
+		while(n != 0) {
+			sum += n % 10;
+			n = n / 10;
 		}
-		return ans;
+		
+		return sum;
 	}
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) {
 
-		int a = 1;
-		int b = d(a);
-		
-		while (b<10000) {
-			b = d(b);
-			System.out.println(b);
+		boolean[] check = new boolean[10001];
+
+		for (int i = 1; i < check.length; i++) {
+			int n = d(i);
+
+			if (n < check.length) {
+				check[n] = true;
+			}
 		}
 
+		StringBuilder sb = new StringBuilder();
+
+		for (int i = 1; i < check.length; i++) {
+			if (!check[i]) {
+				sb.append(i).append('\n');
+			}
+		}
+		System.out.println(sb);
+
 	} // main
+	
 } // Class
