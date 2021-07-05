@@ -1,27 +1,22 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.StringTokenizer;
-
 public class Test {
 
-	static long sum(int[] a) {
-		long ans = 0;
-		for (int i = 0; i < a.length; i++) {
-			ans += a[i];
+	public static void main(String[] args) {
+		
+		int n = 1457;
+		int n1 = (n/1)%10;
+		int n10 = (n/10)%10; 
+		int n100 = (n/100)%10; 
+		int n1000 = (n/1000)%10; 
+		
+		for (int i = 1; i < 10000; i *= 10) {
+			System.out.println(i);
 		}
-		return ans;
-	}
+		
+		System.out.println(n1);
+		System.out.println(n10);
+		System.out.println(n100);
+		System.out.println(n1000);
 
-	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringTokenizer st = new StringTokenizer(br.readLine());
-
-		int[] arr = new int[st.countTokens()];
-		for (int i = 0; i < arr.length; i++) {
-			arr[i] = Integer.parseInt(st.nextToken());
-		}
-		System.out.println(sum(arr));
 	}
 
 }
