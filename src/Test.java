@@ -3,26 +3,25 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main {
+public class Test {
 
-	public static int Test(int[] arr) {
-		int sum = 0;
-		for (int i = 0; i < arr.length; i++) {
-			sum += arr[i];
+	static long sum(int[] a) {
+		long ans = 0;
+		for (int i = 0; i < a.length; i++) {
+			ans += a[i];
 		}
-		return sum;
+		return ans;
 	}
 
 	public static void main(String[] args) throws IOException {
-
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
-		int[] a = new int[st.countTokens()];
-		for (int i = 0; i < a.length; i++) {
-			a[i] = Integer.parseInt(st.nextToken());
+
+		int[] arr = new int[st.countTokens()];
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = Integer.parseInt(st.nextToken());
 		}
+		System.out.println(sum(arr));
+	}
 
-		System.out.println(Test(a));
-
-	} // main
-} // Class
+}
